@@ -86,4 +86,19 @@ exports.updateProduct = async (req, res, next) => {
 
 exports.deleteProduct = async (req, res, next) => {
 
+    try {
+        
+        const result = await Product.findByIdAndDelete(req.params.id);
+        if (result) {
+            return res.status(201).send({
+                message: "Product deleted",
+                payload: result,
+            });
+        }
+        res.status(404).send({
+            message: "Wrong input",
+        });
+    } catch (err) {
+        res.status(500).send(err);
+    }
 };
