@@ -17,6 +17,10 @@ const playerRouter = require('./routes/player');
 const tournamentRouter = require('./routes/tournament');
 const reviewRouter = require('./routes/review');
 const genreRouter = require('./routes/genre');
+const carRouter = require('./routes/car');
+const athleteRouter = require('./routes/athlete');
+const historicalEventRouter = require('./routes/historicalEvent');
+const enviromentRouter = require('./routes/enviroment');
 
 var app = express();
 
@@ -39,6 +43,10 @@ app.use('/player', playerRouter);
 app.use('/event', tournamentRouter);
 app.use('/review', reviewRouter);
 app.use('/genre', genreRouter);
+app.use('/car', carRouter);
+app.use('/athlete', athleteRouter);
+app.use('/historical-event', historicalEventRouter);
+app.use('/enviroment', enviromentRouter);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
