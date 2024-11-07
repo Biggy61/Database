@@ -20,6 +20,7 @@ const carRouter = require('./routes/car');
 const athleteRouter = require('./routes/athlete');
 const historicalEventRouter = require('./routes/historicalEvent');
 const enviromentRouter = require('./routes/enviroment');
+const monkeyRouter = require('./routes/monkey');
 const cors = require('cors');
 var app = express();
 app.use(cors());
@@ -45,6 +46,7 @@ app.use('/car', carRouter);
 app.use('/athlete', athleteRouter);
 app.use('/historical-event', historicalEventRouter);
 app.use('/enviroment', enviromentRouter);
+app.use('/monkeys', monkeyRouter);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
