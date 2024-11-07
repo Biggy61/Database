@@ -13,7 +13,6 @@ var usersRouter = require('./routes/users');
 const productsRouter = require('./routes/products');
 const gamePlatformRouter = require('./routes/gamePlatform');
 const studioRouter = require('./routes/studio');
-const playerRouter = require('./routes/player');
 const tournamentRouter = require('./routes/tournament');
 const reviewRouter = require('./routes/review');
 const genreRouter = require('./routes/genre');
@@ -21,9 +20,9 @@ const carRouter = require('./routes/car');
 const athleteRouter = require('./routes/athlete');
 const historicalEventRouter = require('./routes/historicalEvent');
 const enviromentRouter = require('./routes/enviroment');
-
+const cors = require('cors');
 var app = express();
-
+app.use(cors());
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
@@ -39,7 +38,6 @@ app.use('/users', usersRouter);
 app.use('/products', productsRouter);
 app.use('/platform', gamePlatformRouter);
 app.use('/studio', studioRouter);
-app.use('/player', playerRouter);
 app.use('/event', tournamentRouter);
 app.use('/review', reviewRouter);
 app.use('/genre', genreRouter);
