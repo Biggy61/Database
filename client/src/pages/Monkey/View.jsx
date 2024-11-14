@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function View() {
+export function View() {
   return (
     <>
     

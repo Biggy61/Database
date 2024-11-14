@@ -4,6 +4,8 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const mongoose = require('mongoose');
+const cors = require('cors');
+
 mongoose
 .connect(`mongodb+srv://admin:adminadmin@cluster0.6k0dq.mongodb.net/bohata?retryWrites=true&w=majority&appName=Cluster0`)
 .then(() => console.log("Database connected"))
@@ -21,14 +23,13 @@ const athleteRouter = require('./routes/athlete');
 const historicalEventRouter = require('./routes/historicalEvent');
 const enviromentRouter = require('./routes/enviroment');
 const monkeyRouter = require('./routes/monkey');
-const cors = require('cors');
 var app = express();
-app.use(cors());
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 
 app.use(logger('dev'));
+app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
