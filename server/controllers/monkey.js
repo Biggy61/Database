@@ -63,6 +63,8 @@ exports.createMonkey = async (req, res, next) => {
 
 
 exports.updateMonkey = async (req, res, next) => {
+    console.log(req.body)
+    
     try {
         const data = {
             gender: req.body.gender,
@@ -90,7 +92,7 @@ exports.deleteMonkey = async (req, res, next) => {
         
         const result = await Monkey.findByIdAndDelete(req.params.id);
         if (result) {
-            return res.status(201).send({
+            return res.status(200).send({
                 message: "Monkey deleted",
                 payload: result,
             });

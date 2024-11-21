@@ -16,7 +16,7 @@ export default function AppRoutes() {
       <Route path="/" element = {<Home />}/>
       <Route path="/create-monkeys" element = {<CreateMonkey />}/>
       <Route path="/view-monkey/:id" element = {<ViewMonkey />}/>
-      <Route path="/update-monkeys/:id" element = {<UpdateMonkey />}/>
+      <Route path="/update-monkey/:id" element = {<UpdateMonkey />}/>
       <Route path="/created-monkey/:id" element = {<CreatedMonkey />}/>
       <Route path="/view-monkeys" element = {<MonkeyList />}/>
 

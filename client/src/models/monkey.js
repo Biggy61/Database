@@ -17,7 +17,7 @@ export const getAllMonkeys = async () => {
 }
 
 export const getMonkeyById = async (id) => {
-    const req = await fetch(`http://localhost:3000/monkeys${id}`, {
+    const req = await fetch(`http://localhost:3000/monkeys/${id}`, {
         headers: {
             Accept: "application/json",
             "Content-Type": "application/json"
@@ -50,7 +50,7 @@ export const createMonkey = async (formData) => {
 }
 
 export const updateMonkey = async (id, formData) => {
-    const req = await fetch(`http://localhost:3000/monkeys${id}`, {
+    const req = await fetch(`http://localhost:3000/monkeys/${id}`, {
         headers: {
             Accept: "application/json",
             "Content-Type": "application/json"
@@ -67,7 +67,7 @@ export const updateMonkey = async (id, formData) => {
 }
 
 export const deleteMonkey = async (id) => {
-    const req = await fetch(`http://localhost:3000/monkeys${id}`, {
+    const req = await fetch(`http://localhost:3000/monkeys/${id}`, {
         headers: {
             Accept: "application/json",
             "Content-Type": "application/json"

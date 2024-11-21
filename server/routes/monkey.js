@@ -9,7 +9,7 @@ router.get('/:id', monkeyRouter.getMonkeyById);
 
 router.post('/', monkeyRouter.createMonkey);
 
-router.put('/', monkeyRouter.updateMonkey);
+router.put('/:id', monkeyRouter.updateMonkey);
 
 router.delete('/:id', monkeyRouter.deleteMonkey);
 
