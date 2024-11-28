@@ -11,6 +11,20 @@ export default function Home() {
     <Link to={"/view-monkeys"}>
     <p>Monkeys</p>
     </Link>
+    <h1>Bohata dog</h1>
+    <Link to={"/create-dogs"}>
+    <p>Add new dog</p>
+    </Link>
+    <Link to={"/view-dogs"}>
+    <p>Dogs</p>
+    </Link>
+    <h1>blud Bohata</h1>
+    <Link to={"/create-bohatas"}>
+    <p>Add new bohata</p>
+    </Link>
+    <Link to={"/view-bohatas"}>
+    <p>Bohatas</p>
+    </Link>
     </>
   )
 }

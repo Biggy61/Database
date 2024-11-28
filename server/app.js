@@ -23,6 +23,8 @@ const athleteRouter = require('./routes/athlete');
 const historicalEventRouter = require('./routes/historicalEvent');
 const enviromentRouter = require('./routes/enviroment');
 const monkeyRouter = require('./routes/monkey');
+const dogRouter = require('./routes/dog');
+const bohataRouter = require('./routes/bohata');
 var app = express();
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -48,6 +50,8 @@ app.use('/athlete', athleteRouter);
 app.use('/historical-event', historicalEventRouter);
 app.use('/enviroment', enviromentRouter);
 app.use('/monkeys', monkeyRouter);
+app.use('/dogs', dogRouter);
+app.use('/bohatas', bohataRouter);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
