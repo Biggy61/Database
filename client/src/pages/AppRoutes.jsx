@@ -18,7 +18,13 @@ import {CreateForm as CreateBohata} from "./Bohata/CreateForm";
 import {View as ViewBohata} from "./Bohata/View";
 import {UpdateForm as UpdateBohata} from "./Bohata/UpdateForm";
 import {ViewAll as BohataList} from "./Bohata/ViewAll";
-import {Created as CreatedBohata} from "./Bohata/Created"
+import {Created as CreatedBohata} from "./Bohata/Created";
+
+import {CreateForm as CreateBlud} from "./Blud/CreateForm";
+import {View as ViewBlud} from "./Blud/View";
+import {UpdateForm as UpdateBlud} from "./Blud/UpdateForm";
+import {ViewAll as BludList} from "./Blud/ViewAll";
+import {Created as CreatedBlud} from "./Blud/Created"
 
 export default function AppRoutes() {
   return (
@@ -43,6 +49,12 @@ export default function AppRoutes() {
       <Route path="/update-bohata/:id" element = {<UpdateBohata />}/>
       <Route path="/created-bohata/:id" element = {<CreatedBohata />}/>
       <Route path="/view-bohatas" element = {<BohataList />}/>
+
+      <Route path="/create-bluds" element = {<CreateBlud />}/>
+      <Route path="/view-blud/:id" element = {<ViewBlud />}/>
+      <Route path="/update-blud/:id" element = {<UpdateBlud />}/>
+      <Route path="/created-blud/:id" element = {<CreatedBlud />}/>
+      <Route path="/view-bluds" element = {<BludList />}/>
 
 
     </Routes>

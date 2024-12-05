@@ -25,6 +25,13 @@ export default function Home() {
     <Link to={"/view-bohatas"}>
     <p>Bohatas</p>
     </Link>
+    <h1>blud</h1>
+    <Link to={"/create-bluds"}>
+    <p>Add new blud</p>
+    </Link>
+    <Link to={"/view-bluds"}>
+    <p>bluds</p>
+    </Link>
     </>
   )
 }
