@@ -26,6 +26,12 @@ import {UpdateForm as UpdateBlud} from "./Blud/UpdateForm";
 import {ViewAll as BludList} from "./Blud/ViewAll";
 import {Created as CreatedBlud} from "./Blud/Created"
 
+import {CreateForm as CreateProgrammer} from "./Programmer/CreateForm";
+import {View as ViewProgrammer} from "./Programmer/View";
+import {UpdateForm as UpdateProgrammer} from "./Programmer/UpdateForm";
+import {ViewAll as ProgrammerList} from "./Programmer/ViewAll";
+import {Created as CreatedProgrammer} from "./Programmer/Created";
+
 export default function AppRoutes() {
   return (
     <>
@@ -55,6 +61,12 @@ export default function AppRoutes() {
       <Route path="/update-blud/:id" element = {<UpdateBlud />}/>
       <Route path="/created-blud/:id" element = {<CreatedBlud />}/>
       <Route path="/view-bluds" element = {<BludList />}/>
+
+      <Route path="/create-programmers" element = {<CreateProgrammer />}/>
+      <Route path="/view-programmer/:id" element = {<ViewProgrammer />}/>
+      <Route path="/update-programmer/:id" element = {<UpdateProgrammer />}/>
+      <Route path="/created-programmer/:id" element = {<CreatedProgrammer />}/>
+      <Route path="/view-programmers" element = {<ProgrammerList />}/>
 
 
     </Routes>

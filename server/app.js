@@ -26,6 +26,7 @@ const monkeyRouter = require('./routes/monkey');
 const dogRouter = require('./routes/dog');
 const bohataRouter = require('./routes/bohata');
 const bludRouter = require('./routes/blud');
+const programmerRouter = require('./routes/programmer');
 var app = express();
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -54,6 +55,7 @@ app.use('/monkeys', monkeyRouter);
 app.use('/dogs', dogRouter);
 app.use('/bohatas', bohataRouter);
 app.use('/bluds', bludRouter);
+app.use('/programmers', programmerRouter);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));

@@ -32,6 +32,14 @@ export default function Home() {
     <Link to={"/view-bluds"}>
     <p>bluds</p>
     </Link>
+
+    <h1>programmer</h1>
+    <Link to={"/create-programmers"}>
+    <p>Add new programmer</p>
+    </Link>
+    <Link to={"/view-programmers"}>
+    <p>programmers</p>
+    </Link>
     </>
   )
 }
